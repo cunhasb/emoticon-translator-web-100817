@@ -4,8 +4,8 @@ require 'yaml'
 
 def load_library(path)
   library = YAML.load_file(path)
+   binding.pry
    library.each_with_object do |(meaning,emoticon),new_hash|
-    binding.pry
     new_hash["get_meaning"] ||= {}
     new_hash["get_emoticon"] || {}
     new_hash["get_meaning"][meaning] = emoticon[1]
