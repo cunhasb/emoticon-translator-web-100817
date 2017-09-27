@@ -7,8 +7,8 @@ def load_library(path)
    x = library.each_with_object({}) do |(meaning,emoticon),new_hash|
     new_hash["get_meaning"] ||= {}
     new_hash["get_emoticon"] ||= {}
-    new_hash["get_meaning"][meaning] = emoticon[1]
-    new_hash["get_emoticon"][meaning] = emoticon[0]
+    new_hash["get_meaning"][emoticon[1]] = meaning
+    new_hash["get_emoticon"][emoticon[0]] = emoticon[1]
   end
   # code goes here
   binding.pry
