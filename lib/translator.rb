@@ -18,8 +18,7 @@ library = load_library(path)
 if library["get_emoticon"].key?(emoticon)
   return library["get_emoticon"][emoticon]
 else
-  binding.pry
- puts "Sorry, that emoticon was not found"
+ return "Sorry, that emoticon was not found"
  end
 
   # code goes here
