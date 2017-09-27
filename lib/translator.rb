@@ -9,8 +9,8 @@ def load_library(path)
     new_hash["get_emoticon"] || {}
     new_hash["get_meaning"][meaning] = emoticon[1]
     new_hash["get_emoticon"][meaning] = emoticon[0]
+    binding.pry
   end
- binding.pry
   # code goes here
 end
 
