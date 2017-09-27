@@ -16,6 +16,7 @@ end
 def get_japanese_emoticon(path,emoticon)
 library = load_library(path)
 if library["get_emoticon"].key?(emoticon)
+  binding.pry
   return library["get_emoticon"][emoticon]
 else
  puts "Sorry, that emoticon was not found"
