@@ -19,6 +19,8 @@ library["get_emoticon"][emoticon]
   # code goes here
 end
 
-def get_english_meaning
+def get_english_meaning(path,emoticon)
   # code goes here
+  library = load_library(path)
+  library["get_meaning"][emoticon]
 end
