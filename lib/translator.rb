@@ -4,7 +4,7 @@ require 'yaml'
 
 def load_library(path)
   library = YAML.load_file(path)
-  
+ binding.pry
   # code goes here
 end
 
