@@ -3,7 +3,7 @@ require 'pry'
 require 'yaml'
 
 def load_library(path)
-  YAML.load_file(path)
+  YAML.load_file(path).to_h
   # code goes here
 end
 
