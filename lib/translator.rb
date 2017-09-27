@@ -4,14 +4,14 @@ require 'yaml'
 
 def load_library(path)
   library = YAML.load_file(path)
-   x=library.each_with_object do |(meaning,emoticon),new_hash|
+   library.each_with_object do |(meaning,emoticon),new_hash|
+    binding.pry
     new_hash["get_meaning"] ||= {}
     new_hash["get_emoticon"] || {}
     new_hash["get_meaning"][meaning] = emoticon[1]
     new_hash["get_emoticon"][meaning] = emoticon[0]
   end
   # code goes here
-  binding.pry
 end
 
 def get_japanese_emoticon
